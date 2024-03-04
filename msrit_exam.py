@@ -9,6 +9,8 @@ import json
 EXAM_RESULTS_URL = "https://exam.msrit.edu/"
 UNSUCCESSFUL_LOOKUP_MESSAGE = "Oops!!! your USN could not be found in our result database, please verify the USN and click here to try again"
 
+st.set_page_config(page_title="MSRIT Exam Results", page_icon=":bar_chart:", layout="centered")
+
 
 def generate_payload(usn: str) -> dict:
     """Generate the payload for the POST request based on the USN."""
