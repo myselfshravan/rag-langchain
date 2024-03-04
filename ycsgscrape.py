@@ -15,7 +15,7 @@ def setup_driver(url):
     return driver
 
 
-def scroll_and_extract(driver, scroll_times=200, scroll_delay=1):
+def scroll_and_extract(driver, scroll_times=240, scroll_delay=0.2):
     for _ in range(scroll_times):
         driver.find_element(By.TAG_NAME, 'body').send_keys(Keys.PAGE_DOWN)
         time.sleep(scroll_delay)
@@ -61,4 +61,5 @@ def main(url):
 
 
 if __name__ == "__main__":
-    main("https://youtu.be/dKSrVSXvm4Y?si=vBPKrngUBoXyrIas")
+    yt_url = "https://youtu.be/KJP5RunZUKk?si=PnuAod1oU4mec-TQ"
+    main(yt_url)
